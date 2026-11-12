@@ -60,13 +60,23 @@ public class Ejercicio01 {
                     break;
 
                 case 4:
+                    if (num2 == 0){
+                        System.out.println("El segundo numero no puede ser 0,"
+                                + "intente de nuevo\n");
+                    }else{
                     solucion = num1 / num2;
+                    }
                     break;
-
+                
                 case 5:
+                    if (num2 == 0){
+                        System.out.println("El segundo numero no puede ser 0,"
+                                + "intente de nuevo\n");
+                    }else{
                     solucion = num1 % num2;
+                    }
                     break;
-
+                    
                 case 6:
                     solucion = Math.pow(num1, num2);
                     break;
