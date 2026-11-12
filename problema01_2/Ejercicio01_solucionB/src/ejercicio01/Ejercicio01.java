@@ -21,6 +21,7 @@ public class Ejercicio01 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
+        String tipoOperacion = "";
         int operacion;
         double num1;
         double num2;
@@ -49,17 +50,21 @@ public class Ejercicio01 {
 
                 case 1:
                     solucion = num1 + num2;
+                    tipoOperacion = "Suma";
                     break;
 
                 case 2:
                     solucion = num1 - num2;
+                    tipoOperacion = "Resta";
                     break;
 
                 case 3:
                     solucion = num1 * num2;
+                    tipoOperacion = "Multiplicación";
                     break;
 
                 case 4:
+                    tipoOperacion = "División";
                     if (num2 == 0){
                         System.out.println("El segundo numero no puede ser 0,"
                                 + "intente de nuevo\n");
@@ -69,6 +74,7 @@ public class Ejercicio01 {
                     break;
                 
                 case 5:
+                    tipoOperacion = "Módulo";
                     if (num2 == 0){
                         System.out.println("El segundo numero no puede ser 0,"
                                 + "intente de nuevo\n");
@@ -79,6 +85,7 @@ public class Ejercicio01 {
                     
                 case 6:
                     solucion = Math.pow(num1, num2);
+                    tipoOperacion = "Potencia";
                     break;
 
                 default:
@@ -92,7 +99,7 @@ public class Ejercicio01 {
                         + "Primer número: %.2f\n"
                         + "Segundo número: %.2f\n"
                         + "Operación seleccionada: %s\n\n"
-                        + "Resultado: %.2f", num1, num2, operacion, solucion);
+                        + "Resultado: %.2f", num1, num2, tipoOperacion, solucion);
  
         } else {
             System.out.println("Los numeros ingresados no son correctos");
