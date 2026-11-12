@@ -45,55 +45,51 @@ public class Ejercicio01 {
                     + "6. Potencia\n");
             operacion = entrada.nextInt();
 
-            switch (operacion) {
-
-                case 1:
-                    solucion = num1 + num2;
-                    break;
-
-                case 2:
+            if (operacion == 1) {
+                solucion = num1 + num2;
+            } else {
+                if (operacion == 2) {
                     solucion = num1 - num2;
-                    break;
+                } else {
+                    if (operacion == 3) {
+                        solucion = num1 * num2;
+                    } else {
+                        if (operacion == 4) {
+                            if (num2 == 0) {
+                                System.out.println("El segundo numero no "
+                                        + "puede ser 0, intente de nuevo\n");
+                            } else {
+                                solucion = num1 / num2;
+                            }
+                        } else {
+                            if (operacion == 5) {
+                                if (num2 == 0) {
+                                    System.out.println("El segundo numero no "
+                                            + "puede ser 0, intente de "
+                                            + "nuevo\n");
+                                } else {
+                                    solucion = num1 % num2;
+                                }
 
-                case 3:
-                    solucion = num1 * num2;
-                    break;
-
-                case 4:
-                    if (num2 == 0){
-                        System.out.println("El segundo numero no puede ser 0,"
-                                + "intente de nuevo\n");
-                    }else{
-                    solucion = num1 / num2;
+                            } else {
+                                if (operacion == 6) {
+                                    solucion = Math.pow(num1, num2);
+                                } else {
+                                    System.out.println("El número ingresado"
+                                            + " de la operación es inválido\n");
+                                }
+                            }
+                        }
                     }
-                    break;
-                
-                case 5:
-                    if (num2 == 0){
-                        System.out.println("El segundo numero no puede ser 0,"
-                                + "intente de nuevo\n");
-                    }else{
-                    solucion = num1 % num2;
-                    }
-                    break;
-                    
-                case 6:
-                    solucion = Math.pow(num1, num2);
-                    break;
-
-                default:
-                    System.out.println("El número ingresado de la operación es "
-                            + "inválido\n");
-                    break;
-                    
+                }
             }
 
             System.out.printf("OPERACIONES ARITMÉTICAS\n\n"
-                        + "Primer número: %.2f\n"
-                        + "Segundo número: %.2f\n"
-                        + "Operación seleccionada: %s\n\n"
-                        + "Resultado: %.2f", num1, num2, operacion, solucion);
- 
+                    + "Primer número: %.2f\n"
+                    + "Segundo número: %.2f\n"
+                    + "Operación seleccionada: %s\n\n"
+                    + "Resultado: %.2f", num1, num2, operacion, solucion);
+
         } else {
             System.out.println("Los numeros ingresados no son correctos");
         }
