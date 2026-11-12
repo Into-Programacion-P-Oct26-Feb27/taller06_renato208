@@ -25,6 +25,7 @@ public class Ejercicio01 {
         double num1;
         double num2;
         double solucion = 0;
+        String tipoOperacion = "";
 
         System.out.println("Ingrese el primer numero:");
         num1 = entrada.nextDouble();
@@ -47,22 +48,27 @@ public class Ejercicio01 {
 
             if (operacion == 1) {
                 solucion = num1 + num2;
+                tipoOperacion = "Suma";
             } else {
                 if (operacion == 2) {
                     solucion = num1 - num2;
+                    tipoOperacion = "Resta";
                 } else {
                     if (operacion == 3) {
                         solucion = num1 * num2;
+                        tipoOperacion = "Multiplicación";
                     } else {
                         if (operacion == 4) {
+                            tipoOperacion = "División";
                             if (num2 == 0) {
                                 System.out.println("El segundo numero no "
                                         + "puede ser 0, intente de nuevo\n");
                             } else {
-                                solucion = num1 / num2;
+                                solucion = num1 / num2; 
                             }
                         } else {
                             if (operacion == 5) {
+                                tipoOperacion = "Módulo";
                                 if (num2 == 0) {
                                     System.out.println("El segundo numero no "
                                             + "puede ser 0, intente de "
@@ -74,6 +80,7 @@ public class Ejercicio01 {
                             } else {
                                 if (operacion == 6) {
                                     solucion = Math.pow(num1, num2);
+                                    tipoOperacion = "Potencia";
                                 } else {
                                     System.out.println("El número ingresado"
                                             + " de la operación es inválido\n");
@@ -88,7 +95,7 @@ public class Ejercicio01 {
                     + "Primer número: %.2f\n"
                     + "Segundo número: %.2f\n"
                     + "Operación seleccionada: %s\n\n"
-                    + "Resultado: %.2f", num1, num2, operacion, solucion);
+                    + "Resultado: %.2f", num1, num2, tipoOperacion, solucion);
 
         } else {
             System.out.println("Los numeros ingresados no son correctos");
